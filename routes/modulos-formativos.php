@@ -7,4 +7,6 @@ Route::controller(ModuloFormativoController::class)->prefix('modulos-formativos'
     Route::get('show/{id}', 'show')->name('show')->whereNumber('id');
     Route::get('create', 'create')->name('create');
     Route::get('edit/{id}', 'edit')->name('edit')->whereNumber('id');
+    Route::post('/', 'store')->name('store');
+    Route::put('edit/{id}', 'update')->whereNumber('id')->name('update');
 });
